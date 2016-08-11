@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<link href="bower_components/bootstrap-css-only/css/bootstrap.css" rel="stylesheet" />
+		<style>
+			.map {
+				display: block;
+				width: 640px;
+				height: 480px;
+			}
+		</style>
+	</head>
+
+	<body ng-app="app" ng-controler="TestController">
+		<input coordinate-input coordinate-value="{lng:104,lat:36}">
+		<!-- bower:js -->
+		<script src="bower_components/angular/angular.js"></script>
+		<!-- endbower -->
+		<script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+		<script src="dist/angular-gaode-map.js"></script>
+		<script src="dist/angular-gaode-template.js"></script>
+		<script>
+			angular.module('app', ['ngGaodeMap', 'ui.bootstrap', 'templates-main']).config(config)
+				.controller('coordinateController', function() {});
+
+			function config(gaodeMapApiProvider) {
+				gaodeMapApiProvider.accessKey('Ivgr94UBpL6zkp4lUZRtQCys');
+			}
+		</script>
+	</body>
+
+</html>

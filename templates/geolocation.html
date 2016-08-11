@@ -1,0 +1,6 @@
+<div class="btn-group" uib-dropdown auto-close="outsideClick">
+	<div class="input-group"><input type="text" class="form-control" value="{{coordinateCtrl.point.lng}}, {{coordinateCtrl.point.lat}}" placeholder="Search for..." readonly="readonly">
+		<div class="input-group-btn"><button class="btn btn-default" type="button" uib-dropdown-toggle ng-disabled="disabled"><span class="caret"></span></button></div>
+	</div>
+	<div class="dropdown-menu dropdown-menu-right" uib-dropdown-menu template-url="templates/dropdown.html"></div>
+</div>

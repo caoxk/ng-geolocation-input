@@ -1,0 +1,34 @@
+{
+  "name": "ng-gaode-map",
+  "version": "1.0.10",
+  "description": "高德地图 for AngularJS",
+  "main": "angular-gaode-map.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pack": "browserify index.js -o dist/angular-gaode-map.js",
+    "annotate": "ng-annotate -a dist/angular-gaode-map.js > dist/angular-gaode-map.annotated.js",
+    "minify": "uglifyjs dist/angular-gaode-map.annotated.js -c -m > dist/angular-gaode-map.min.js",
+    "build": "npm run pack && npm run annotate && npm run minify",
+    "bump": "npm --no-git-tag-version version patch && git add package.json && git commit -m 'bump version' && bower version patch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gengen1988/ng-baidu-map.git"
+  },
+  "author": "GG",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gengen1988/ng-baidu-map/issues"
+  },
+  "homepage": "https://github.com/gengen1988/ng-baidu-map",
+  "dependencies": {
+    "angular": "^1.4.1"
+  },
+  "devDependencies": {
+    "browserify": "^13.1.0",
+    "grunt": "^1.0.1",
+    "grunt-html2js": "^0.3.6",
+    "ng-annotate": "^1.2.1",
+    "uglifyjs": "^2.4.10"
+  }
+}
